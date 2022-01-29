@@ -1,0 +1,10 @@
+---
+- hosts: web
+  tasks:
+  - name: execute smple command
+    command: echo "This is first line \n this is second line"
+    register: result
+  - name: print statement
+    debug:
+      msg: "my system ipadd is {{ ansible_default_ipv4.address }}"
+
