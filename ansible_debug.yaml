@@ -12,7 +12,8 @@
     register: result1
   - name: print msg or uptime
     debug:
-      msg: "{{ result1 }}"
+      var: result1
+# this is how you can use variable show output
   - name: print statement
     debug:
       msg: "my system ipadd is {{ ansible_default_ipv4.address }}"
